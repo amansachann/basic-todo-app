@@ -1,0 +1,12 @@
+# Ignore these files and directories
+/node_modules
+/.vscode
+./dist
+
+
+*.env
+.env
+.env*
+
+# Ignore all HTML files:
+**/*.html
