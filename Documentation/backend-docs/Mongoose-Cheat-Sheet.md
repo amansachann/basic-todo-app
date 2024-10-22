@@ -59,10 +59,7 @@ To start using MongoDB with Mongoose, you need to establish a connection. Below 
 const mongoose = require('mongoose'); // Import Mongoose library
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/mydatabase', {
-    useNewUrlParser: true, // Use the new URL parser to avoid deprecation warnings
-    useUnifiedTopology: true // Use the new topology engine for better performance
-});
+mongoose.connect('mongodb://localhost:27017/mydatabase');
 
 // Success event
 mongoose.connection.on('connected', () => {
@@ -108,7 +105,7 @@ const userSchema = new Schema({
 
 #### Schema Options
 - **timestamps**: Automatically adds `createdAt` and `updatedAt` fields.
-- **strict**: Mongoose will only allow fields that are specified in the schema; others will be discarded.
+- **strict**: Mongoose will only allow fields that are specified in the schema; others will be discarded. `default - true`
 - **versionKey**: Disables the default `__v` version key if set to `false`.
 
 ```javascript
